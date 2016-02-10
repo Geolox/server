@@ -1,0 +1,60 @@
+<navbar></navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default" ng-click="main.addReport()" >Add</button>
+            </div>
+
+            <table class="table table-condensed">
+                <thead>
+                    <tr style="font-size:14px;">
+                        <th>Updated</th>
+                        <th>Created</th>
+                        <th>Category</th>
+                        <th>Report datetime</th>
+                        <th>Due datetime</th>
+                        <th>Closed datetime</th>
+                        <th>Description</th>
+                        <th>Img1</th>
+                        <th>Img2</th>
+                        <th>Img3</th>
+                        <th>Img1thumb</th>
+                        <th>User</th>
+                        <th>Loc</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in main.reports" ng-class-even="table-striped" style="cursor:pointer">
+                        <td>{{item.updated.shortDateFormat()}}</td>
+                        <td>{{item.created.shortDateFormat()}}</td>
+                        <td>{{item.category}}</td>
+                        <td>{{item.report_datetime.shortDateFormat()}}</td>
+                        <td>{{item.due_datetime.shortDateFormat()}}</td>
+                        <td>{{item.closed_datetime.shortDateFormat()}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.img1}}</td>
+                        <td>{{item.img2}}</td>
+                        <td>{{item.img3}}</td>
+                        <td>{{item.img1thumb}}</td>
+                        <td>{{item.user}}</td>
+                        <td>{{item.loc}}</td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" ng-click="main.selectReport(item)" >Edit</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default" ng-click="main.deleteReport(item)" >Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<footer></footer>

@@ -1,0 +1,185 @@
+<navbar></navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="ng-binding"></h1>
+
+            <form role="form" name="form" ng-submit="main.saveItem()" novalidate=""
+                  class="ng-pristine ng-invalid ng-invalid-required">
+                
+                <div class="row">
+                  <div class="form-group col-xs-6 col-md-4">
+                      <label for="categoryInput" class="ng-binding">Category</label>
+                      <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                      <select name="categoryInput" 
+                              placeholder="Enter Category" 
+                              class="form-control" 
+                              ng-model="main.report.category" 
+                              ng-options="item._id as item.name for item in main.categories">
+                          <option value="">Select Category</option>
+                      </select>
+                      <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                      
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="report_datetimeInput" class="ng-binding">Report_datetime</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input type="date"
+                               name="report_datetimeInput"
+                               ng-model="main.report.report_datetime"
+                               class="form-control"
+                               placeholder="Enter Report_datetime"/>
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="due_datetimeInput" class="ng-binding">Due_datetime</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input type="date"
+                               name="due_datetimeInput"
+                               ng-model="main.report.due_datetime"
+                               class="form-control"
+                               placeholder="Enter Due_datetime"/>
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="closed_datetimeInput" class="ng-binding">Closed_datetime</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input type="date"
+                               name="closed_datetimeInput"
+                               ng-model="main.report.closed_datetime"
+                               class="form-control"
+                               placeholder="Enter Closed_datetime"/>
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="descriptionInput" class="ng-binding">Description</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="descriptionInput"
+                               ng-model="main.report.description"
+                               class="form-control"
+                               placeholder="Enter Description"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="img1Input" class="ng-binding">Img1</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="img1Input"
+                               ng-model="main.report.img1"
+                               class="form-control"
+                               placeholder="Enter Img1"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="img2Input" class="ng-binding">Img2</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="img2Input"
+                               ng-model="main.report.img2"
+                               class="form-control"
+                               placeholder="Enter Img2"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="img3Input" class="ng-binding">Img3</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="img3Input"
+                               ng-model="main.report.img3"
+                               class="form-control"
+                               placeholder="Enter Img3"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="img1thumbInput" class="ng-binding">Img1thumb</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="img1thumbInput"
+                               ng-model="main.report.img1thumb"
+                               class="form-control"
+                               placeholder="Enter Img1thumb"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="userInput" class="ng-binding">User</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="userInput"
+                               ng-model="main.report.user"
+                               class="form-control"
+                               placeholder="Enter User"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+
+                <div class="row">
+                    <div class="form-group col-xs-6 col-md-4">
+                        <label for="locInput" class="ng-binding">Loc</label>
+                        <!--<span ng-hide="!streetAddress.required" style="padding-left: 8px" class="ng-binding">(required)</span>-->
+                        
+                        <input name="locInput"
+                               ng-model="main.report.loc"
+                               class="form-control"
+                               placeholder="Enter Loc"/>
+                        <!--ng-required="streetAddress.required &amp;&amp; streetAddress.visible" required="required">-->
+                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-6 col-md-4">
+                        <button type="submit" class="btn btn-primary pull-right" ng-disabled="form.$error.required"
+                                disabled="disabled"><span class="ng-binding">Save</span> <span
+                                class="glyphicon glyphicon-chevron-right"></span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer></footer>

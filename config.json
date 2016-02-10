@@ -1,0 +1,33 @@
+{
+    "clean": true,
+    "globalModel":
+    {
+        "updated":"Date",
+        "created":"Date"
+    },
+    "entities": [
+        {
+            "name": "report",
+            "model": {
+                "category":"MongooseReference:Category",
+                "report_datetime": "Date",
+                "due_datetime": "Date",
+                "closed_datetime": "Date",
+                "description": "String",
+                "img1":"String",
+                "img2":"String",
+                "img3":"String",
+                "img1thumb":"String",
+                "user":"MongooseReference:User",
+                "loc": "{ type: [Number], index: '2dsphere'}"
+            }
+        },
+        {
+            "name": "category",
+            "model": {
+                "name": "String",
+                "short_name": "String"
+            }
+        }
+    ]
+}
